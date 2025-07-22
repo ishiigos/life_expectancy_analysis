@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life Expectancy Predictor</title>
+</head>
+<body>
+    <h2>Life Expectancy Prediction</h2>
+    <form method="POST">
+        {% for i in range(1, 16) %}
+        <label for="feature{{ i }}">Feature {{ i }}:</label>
+        <input type="text" name="feature{{ i }}" required><br><br>
+        {% endfor %}
+
+        <label>Select Model:</label><br>
+        <input type="radio" name="model" value="ml" checked> Machine Learning<br>
+        <input type="radio" name="model" value="dl"> Deep Learning<br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }} years</h3>
+    {% endif %}
+</body>
+</html>
