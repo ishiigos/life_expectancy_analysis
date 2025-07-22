@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # 0 = all logs, 1 = filter INFO, 2 = filter INFO+WARNINGS, 3 = only ERRORS
+
 from flask import Flask, render_template, request
 import numpy as np
 import joblib
