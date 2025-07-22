@@ -10,9 +10,9 @@ import tensorflow as tf
 app = Flask(__name__)
 
 # Load models
-ml_model = joblib.load("models/ml_model.pkl")
-preprocessor = joblib.load("models/preprocessor.pkl")
-dl_model = tf.keras.models.load_model("models/dl_model.h5")
+ml_model = joblib.load("models/final_rf_model.pkl")
+preprocessor = joblib.load("models/life_expectancy_scaler.pkl")
+dl_model = tf.keras.models.load_model("models/life_expectancy_dl_model.h5")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
