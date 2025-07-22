@@ -2,4 +2,4 @@ Flask
 joblib
 numpy
 scikit-learn
-tensorflow # ensure Python version 3.10 or lower)
+tensorflow==2.11.0 # ensure Python version 3.10 or lower)
